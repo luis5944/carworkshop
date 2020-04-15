@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-dic-2019 17:47:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Cliente" table="cliente" catalog="taller" optimistic-lock="version">
+        <id name="codcli" type="int">
+            <column name="codcli" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomcli" type="string">
+            <column name="nomcli" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="40" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="tfno" type="string">
+            <column name="tfno" length="12" />
+        </property>
+        <set name="coches" table="coche" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codcli" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Coche" />
+        </set>
+    </class>
+</hibernate-mapping>

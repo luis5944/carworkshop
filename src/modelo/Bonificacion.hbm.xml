@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-dic-2019 17:47:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Bonificacion" table="bonificacion" catalog="taller" optimistic-lock="version">
+        <composite-id name="id" class="modelo.BonificacionId">
+            <key-property name="codemp" type="int">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="mes" type="string">
+                <column name="mes" length="2" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="empleado" class="modelo.Empleado" update="false" insert="false" fetch="select">
+            <column name="codemp" not-null="true" />
+        </many-to-one>
+        <property name="importebonificado" type="java.lang.Float">
+            <column name="importebonificado" precision="6" />
+        </property>
+    </class>
+</hibernate-mapping>

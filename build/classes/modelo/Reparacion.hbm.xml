@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-dic-2019 17:47:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Reparacion" table="reparacion" catalog="taller" optimistic-lock="version">
+        <composite-id name="id" class="modelo.ReparacionId">
+            <key-property name="codemp" type="int">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="matricula" type="string">
+                <column name="matricula" length="7" />
+            </key-property>
+            <key-property name="fechai" type="timestamp">
+                <column name="fechai" length="19" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="coche" class="modelo.Coche" update="false" insert="false" fetch="select">
+            <column name="matricula" length="7" not-null="true" />
+        </many-to-one>
+        <many-to-one name="empleado" class="modelo.Empleado" update="false" insert="false" fetch="select">
+            <column name="codemp" not-null="true" />
+        </many-to-one>
+        <property name="importe" type="java.lang.Double">
+            <column name="importe" precision="7" />
+        </property>
+        <property name="fechaf" type="timestamp">
+            <column name="fechaf" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
