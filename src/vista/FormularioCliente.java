@@ -514,7 +514,7 @@ public class FormularioCliente extends javax.swing.JDialog {
         }
 
         Cliente c = (Cliente) cbClientes.getSelectedItem();
- 
+
         try {
             Conexion.abrirBD();
 

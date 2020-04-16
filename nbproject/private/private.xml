@@ -14,15 +14,6 @@
         <group>
             <file>file:/F:/2º%20DAM/Acceso%20a%20datos/Tema%203/PUD3_LuisEnriqueFragaNistal/src/vista/FormularioCliente.java</file>
         </group>
-        <group name="Group 20181209-01:07:29">
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/vista/FormularioReparaciones.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/controlador/GestionReparaciones.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/controlador/GestionClientes.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/controlador/Conexion.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/vista/FormularioCliente.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/controlador/GestionCoche.java</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/Luis/Desktop/PUD3_LuisEnriqueFragaNistal/src/controlador/GestionListados.java</file>
-        </group>
+        <group name="Group 20181209-01:07:29"/>
     </open-files>
 </project-private>

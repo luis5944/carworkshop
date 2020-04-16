@@ -122,11 +122,12 @@ public class GestionClientes {
      */
     public static void borrarCliente(int codCli, JComboBox modeloCliente) {
 
-        String consulta = "select reparacion from Cliente cliente, cliente.coches coche, coche.reparacions reparacion where cliente.codcli= ?";
         if (hayCochesReparacion(codCli)) {
             JOptionPane.showMessageDialog(null, "Tiene reparaciones en marcha");
             return;
         }
+        
+        String consulta = "select reparacion from Cliente cliente, cliente.coches coche, coche.reparacions reparacion where cliente.codcli= ?";
         Query q = Conexion.getSession().createQuery(consulta);
         q.setInteger(0, codCli);
         ArrayList resultado = (ArrayList) q.list();
@@ -137,7 +138,7 @@ public class GestionClientes {
             Conexion.getSession().delete(r);
         }
 
-        consulta = "select coche from Cliente cliente, cliente.coches coche where cliente.codcli= ?";
+        consulta = "select coche from Clientesss cliente, cliente.coches coche where cliente.codcli= ?";
         q = Conexion.getSession().createQuery(consulta);
         q.setInteger(0, codCli);
         resultado = (ArrayList) q.list();

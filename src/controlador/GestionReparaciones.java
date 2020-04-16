@@ -56,7 +56,6 @@ public class GestionReparaciones {
      *
      * @param lista
      */
-
     public static void rellenarLista(DefaultListModel lista) {
 
         String consulta = "from Cliente c";
