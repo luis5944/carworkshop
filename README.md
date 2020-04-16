@@ -1,5 +1,5 @@
 # carworkshop
-First app project with hibernate.
+First project with hibernate.
 
 # This app covers basic hibernate concepts like:
 1. CRUD Operations
